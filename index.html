@@ -96,15 +96,16 @@ body{
 .host{display:inline-block;padding:7px 15px;border:1px solid rgba(47,228,255,.45);border-radius:999px;
   font-size:12px;font-weight:700;letter-spacing:.01em;color:#a9ecff;
   box-shadow:0 0 22px rgba(47,228,255,.14) inset;}
-.kicker{margin:26px 0 14px;font-family:var(--tech);font-size:13px;font-weight:600;letter-spacing:.34em;color:var(--lime);}
-h1{margin:0;font-weight:900;line-height:1.02;letter-spacing:-.02em;font-size:clamp(40px,13.5vw,58px);}
-h1 .yr{display:block;font-size:.42em;font-weight:700;color:var(--ink-3);letter-spacing:0;margin-bottom:12px;}
+.kicker{margin:26px 0 14px;font-family:var(--tech);font-size:12px;font-weight:600;letter-spacing:.24em;color:var(--lime);}
+h1{margin:0;font-weight:900;line-height:1.04;letter-spacing:-.02em;font-size:clamp(37px,11.6vw,54px);}
+h1 span{display:block;}
+h1 .yr{font-size:.44em;font-weight:700;color:var(--ink-3);letter-spacing:0;margin-bottom:12px;}
 h1 .l1{color:var(--cyan);text-shadow:0 0 26px rgba(47,228,255,.55);}
 .lede{margin:22px 0 0;font-size:16px;line-height:1.75;color:var(--ink-2);max-width:30ch;}
 .lede b{color:#fff;font-weight:700;}
 
 .when{margin-top:30px;padding-top:22px;border-top:1px solid rgba(255,255,255,.14);}
-.when .d{font-family:var(--tech);font-weight:700;font-size:clamp(25px,7.6vw,33px);letter-spacing:.01em;line-height:1.2;}
+.when .d{font-family:var(--tech);font-weight:700;font-size:clamp(19px,5.7vw,31px);letter-spacing:0;line-height:1.25;white-space:nowrap;}
 .when .d i{font-style:normal;color:var(--cyan);}
 .when .d em{font-style:normal;color:var(--magenta);}
 .when .p{margin-top:8px;font-size:15px;font-weight:700;color:var(--ink-2);}
@@ -185,19 +186,24 @@ li.finale::before{left:-25px;background:var(--magenta);border-color:var(--magent
 .contact{margin-top:26px;padding-top:22px;border-top:1px solid rgba(255,255,255,.12);}
 .contact .lb{font-size:12px;font-weight:700;color:var(--ink-3);letter-spacing:.04em;}
 .contact .tels{display:flex;flex-wrap:wrap;align-items:baseline;gap:9px;margin-top:5px;}
-.contact .tels span{font-size:13px;font-weight:500;color:var(--ink-3);}
+.contact .or{white-space:nowrap;}
+.contact .or i{font-style:normal;font-family:var(--kr);font-size:13px;font-weight:500;color:var(--ink-3);}
 .contact a{font-family:var(--tech);font-size:clamp(21px,6.4vw,25px);font-weight:700;
   color:#fff;text-decoration:none;letter-spacing:.01em;}
 .contact a:focus-visible{outline:2px solid var(--cyan);outline-offset:3px;border-radius:6px;}
 .contact p{margin:4px 0 0;font-size:13.5px;color:var(--ink-3);}
 .orgs{margin-top:30px;}
 .orgs .lb{font-size:12px;font-weight:700;color:var(--ink-3);letter-spacing:.04em;}
-.logobar{display:flex;flex-wrap:wrap;align-items:center;gap:12px 20px;margin-top:14px;}
+.logobar{display:flex;flex-wrap:wrap;align-items:center;gap:14px 12px;margin-top:14px;}
 .logobar img{display:block;width:auto;opacity:.88;}
-.logobar .l-gw{height:26px;}
-.logobar .l-gwcf{height:40px;}
-.logobar .l-gfc{height:42px;}
-.logobar .l-kt{height:19px;}
+.logobar .l-gw{height:23px;}
+.logobar .l-gwcf{height:35px;}
+.logobar .l-gfc{height:37px;}
+.logobar .l-kt{height:15px;}
+@media (max-width:379px){
+  .logobar{display:grid;grid-template-columns:auto auto;justify-content:start;justify-items:start;
+    align-items:center;gap:16px 20px;}
+}
 
 @media (prefers-reduced-motion:reduce){
   .beam,.facade b{animation:none !important;}
@@ -222,7 +228,7 @@ li.finale::before{left:-25px;background:var(--magenta);border-color:var(--magent
   <header class="hero">
     <span class="host">강원문화재단 부설 강원영상위원회</span>
     <p class="kicker">LIVE MEDIA ART WORKSHOP</p>
-    <h1><span class="yr">2026년 강원</span><span class="l1">라이브</span> 미디어아트<br>워크숍</h1>
+    <h1><span class="yr">2026년 강원</span><span class="l1">라이브</span><span>미디어아트</span><span>워크숍</span></h1>
     <p class="lede">터치디자이너와 AI로 만든 작품을 <b>서암관 외벽에 직접 상영</b>하는 2박 3일. 기획부터 실측, 제작, 리허설, 시민 공개 전시까지 한 번에 겪습니다.</p>
 
     <div class="when">
@@ -391,8 +397,7 @@ li.finale::before{left:-25px;background:var(--magenta);border-color:var(--magent
     <p class="lb">문의</p>
     <p class="tels">
       <a href="tel:033-240-1385">033-240-1385</a>
-      <span>또는</span>
-      <a href="tel:010-5027-6523">010-5027-6523</a>
+      <span class="or"><i>또는</i> <a href="tel:010-5027-6523">010-5027-6523</a></span>
     </p>
     <p>강원영상위원회 사무국</p>
   </div>
